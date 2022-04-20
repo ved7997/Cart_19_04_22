@@ -1,0 +1,27 @@
+package com.example.cart_19_04_22.controller;
+
+import com.example.cart_19_04_22.service.CartService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/store/order")
+public class CartController {
+    private final CartService cartService;
+
+    public CartController(CartService cartService) {
+        this.cartService = cartService;
+    }
+@GetMapping("/add")
+   public List<Integer> addCollection(@RequestParam List<Integer> item){
+        return cartService.addCollection(item);
+    }
+@GetMapping("/get")
+   public List<Integer> returnCollection(){
+        return cartService.returnСollection();
+    }
+}
