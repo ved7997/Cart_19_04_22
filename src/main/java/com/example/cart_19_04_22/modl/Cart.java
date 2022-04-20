@@ -7,18 +7,18 @@ import java.util.List;
 
 public class Cart {
 
-    private List<Integer> itams;
+    private List<Integer> items;
 
     public Cart() {
-        this.itams = new ArrayList<>();
+        this.items = new ArrayList<>();
     }
 
-    public List<Integer> addId(List<Integer> item){
-        itams.addAll(item);
+    public List<Integer> addId(List<Integer> item) {
+        items.addAll(item);
         return item;
     }
 
     public List<Integer> getId(){
-        return new ArrayList<Integer>(itams);
+        return new ArrayList<Integer>(items);
     }
 }

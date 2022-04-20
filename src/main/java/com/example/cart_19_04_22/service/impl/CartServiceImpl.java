@@ -8,19 +8,19 @@ import java.util.List;
 
 @Service
 public class CartServiceImpl implements CartService {
-    private Cart cart;
+    private final Cart cart;
 
     public CartServiceImpl(Cart cart) {
         this.cart = cart;
     }
 
     @Override
-    public List<Integer> addId(List<Integer> item) {
+    public List<Integer> addCollection(List<Integer> item) {
         return cart.addId(item);
     }
 
     @Override
-    public List<Integer> getId() {
+    public List<Integer> returnСollection() {
         return cart.getId();
     }
 }

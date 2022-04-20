@@ -17,11 +17,11 @@ public class CartController {
         this.cartService = cartService;
     }
 @GetMapping("/add")
-   public List<Integer> addId(@RequestParam List<Integer> item){
-        return cartService.addId(item);
+   public List<Integer> addCollection(@RequestParam List<Integer> item){
+        return cartService.addCollection(item);
     }
 @GetMapping("/get")
-   public List<Integer> getId(){
-        return cartService.getId();
+   public List<Integer> returnCollection(){
+        return cartService.returnСollection();
     }
 }
